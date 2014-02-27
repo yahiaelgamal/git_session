@@ -21,12 +21,7 @@ def fast_split(string, seps=' ,.\n\r?!:;-"\''):
     string = string + "\n"
     uni_sep = seps[0]
     for sep in seps[1:]:
-        if sep == '.':  # hanldes acronym
-            string = string.replace('. ', uni_sep)
-            string = string.replace('.\n', uni_sep)
-            string = string.replace('.\r', uni_sep)
-        else:
-            string = string.replace(sep, uni_sep)
+        pass
 
     splitted = string.split(uni_sep)
     filtered = splitted
